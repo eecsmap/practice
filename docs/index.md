@@ -15,3 +15,11 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
     docs/
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
+
+## Practice
+- keep updating [README](https://github.com/eecsmap/practice/blob/main/README.md) document
+
+## Data Structures
+- [data_structure/index.md](data_structure/index.md)
+- [data_structure/](data_structure/)
+- [data_structure](data_structure)

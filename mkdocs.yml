@@ -1,4 +1,8 @@
-site_name: practice make perfect
+site_name: Practice Makes Perfect
 
 theme:
   name: material
+
+nav:
+  - Home: 'index.md'
+  - Data Structure: 'data_structure/index.md'
