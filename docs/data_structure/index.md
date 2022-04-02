@@ -35,3 +35,5 @@ def bin_search(n, value):
             low = mid + 1
     return -1
 ```
+
+<img width="427" alt="image" src="https://user-images.githubusercontent.com/71915887/161373020-4d755567-8d39-401a-9c21-e6c93afafb00.png">
