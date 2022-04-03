@@ -32,3 +32,6 @@
 ## best practice
 - run `mkdocs serve` to do the local change
 - keep updating [this](https://github.com/eecsmap/practice/blob/main/README.md) document
+
+## remember to add docs/CNAME
+Otherwise you need to set the git pages custom domain every time you push new content.
