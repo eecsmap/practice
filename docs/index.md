@@ -7,7 +7,7 @@ Practice to keep the cache hot.
 
 ## Feeling $\gt$ Understanding
 
-### conclusion
+### bits and levels
 
 * For $n$ node complete tree
   * the deeptest level is $\lfloor log(n) \rfloor$
@@ -59,6 +59,46 @@ So the total number of levels is
 
 $$\lceil log(n + 1) \rceil = \lfloor log(n) \rfloor + 1$$
 
+
+### how many bits needed to represent a number $n \in \mathbb{N}$?
+
+| number | binary | #bits |
+| ----------- | ----------- | ----------- |
+| 0 | 0 | 1 |
+| 1 | 1 | 1 |
+| 2 | 10 | 2 |
+| 3 | 11 | 2 |
+| 4 | 100 | 3 |
+| 5 | 101 | 3 |
+| 6 | 110 | 3 |
+| 7 | 111 | 3 |
+| 8 | 1000 | 4 |
+| 9 | 1001 | 4 |
+
+$$\lceil log(n + 1) \rceil$$
+
+If a number $n$ needs $k$ bits to represent, then its binary string can be written as $1x_{k-1}\ldots x_1$. Whenever we divide it by $2$, the binary string shift to right by one bit. After $k-1$ times of shift, it turns out to be $1$.
+
+Apparently
+
+$$2^{k-1} \leq n < 2^k$$
+
+So we have:
+$$k - 1 \leq log(n) < k$$
+
+$$k = \lfloor log(n) \rfloor + 1$$
+
+Or:
+
+$$k = \lceil log(n+1) \rceil$$
+
+
+Since the binary string is actually the path from root to node n (index from 1). Bit string $1x_1x_2\ldots x_{k-1}$. Root node means the leading $1$, for every level $i$, if $x_i$ is $0$ then go left, otherwise go right. Eventually you will reach node $n$ at level $k-1$, including the leading $1$ which represented by root node, there are $k$ levels / bits involved.
+
+So, these two questions are equivalent:
+
+- n nodes complete binary tree: how many levels
+- n's binary format: how many bits
 
 --8<--
 included.md
