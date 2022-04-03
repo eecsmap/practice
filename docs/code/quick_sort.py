@@ -7,7 +7,7 @@ def quick_sort(data):
         pivot = data[end]
         i = start - 1
         for j in range(start, end):
-            if data[j] <= pivot: # < could work as well, actually I prefer to use <
+            if data[j] <= pivot: # (1)
                 i += 1
                 data[i], data[j] = data[j], data[i]
         data[end], data[i + 1] = data[i + 1], data[end]
@@ -15,41 +15,45 @@ def quick_sort(data):
 
     def _partition2(start, end):
         '''
-        from Problem Solving with Algorithms and Data Structures Using Python
+        from book:
+        Problem Solving with Algorithms and Data Structures Using Python
         '''
+        assert start < end
         pivot = data[start]
-        done = False
         i = start + 1
         j = end
-        while not done:
-            while i <= j and data[i] <= pivot: i += 1 # must be <= and >= to get meet
+        # loop invariant:
+        # data on the left side of i are <= pivot
+        # data on the right side of j are >= pivot
+        while i <= j:
+            while i <= j and data[i] <= pivot: i += 1 # (2)
             while i <= j and data[j] >= pivot: j -= 1
-            if i > j: done = True
-            else:
-                data[i], data[j] = data[j], data[i] # if pivot on begin, use j to indicate the pos
+            if i < j:
+                data[i], data[j] = data[j], data[i]
+        assert j < i
+        # since pivot is at the begining, swap with j
+        # if we have choosen pivot at the end, then swap with i
         data[j], data[start] = data[start], data[j]
         return j
 
-    def _partition25(start, end):
+    def _partition3(start, end):
         '''
-        from Problem Solving with Algorithms and Data Structures Using Python
+        Another example using end pivot
         '''
         pivot = data[end]
-        done = False
         i = start
         j = end - 1
-        while not done:
+        while i <= j:
             while i <= j and data[i] <= pivot: i += 1
             while i <= j and data[j] >= pivot: j -= 1
-            if i > j: done = True
-            else:
-                data[i], data[j] = data[j], data[i] # if pivot on end, use i to indicate the pos
+            if i < j:
+                data[i], data[j] = data[j], data[i]
         data[i], data[end] = data[end], data[i]
         return i
 
-    def _partition3(start, end):
+    def _partition4(start, end):
         '''
-        my thought
+        my way
         '''
         i = start
         for j in range(start + 1, end + 1):
@@ -59,8 +63,7 @@ def quick_sort(data):
         data[start], data[i] = data[i], data[start]
         return i
     
-    import random
-    _partition = [_partition1, _partition2, _partition3][random.randint(0, 2)]
+    _partition = _partition4
     
     def _quick_sort(start, end):
         if start >= end: return
@@ -80,7 +83,7 @@ def qsort(data):
         pivot = data[first]
         p = first
         for i in range(first + 1, last + 1):
-            if data[i] <= pivot:
+            if data[i] < pivot:
                 p += 1
                 data[p], data[i] = data[i], data[p]
         data[first], data[p] = data[p], data[first]
@@ -89,7 +92,8 @@ def qsort(data):
 
     return _qsort(0, len(data) - 1)
 
-sort = qsort #quick_sort
+sort = qsort 
+sort = quick_sort
 
 def test_sort():
     '''

@@ -19,7 +19,10 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 ## Practice
 - keep updating [README](https://github.com/eecsmap/practice/blob/main/README.md) document
 
+
+
+--8<--
+included.md
+--8<--
+
 ## Data Structures
-- [data_structure/index.md](data_structure/index.md)
-- [data_structure/](data_structure/)
-- [data_structure](data_structure)
