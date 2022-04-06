@@ -25,3 +25,6 @@ nav:
   - Data Structure:
     - 'main': 'data_structure/index.md'
     - 'BST': 'data_structure/bst.md'
+  - Java: 'java.md'
+  - Probability:
+    - 'main': 'probability/index.md'

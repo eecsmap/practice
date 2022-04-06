@@ -20,5 +20,9 @@
 --8<-- "code/quick_sort.py"
 ```
 
+## Insertion Sort
+
+Be careful not to swap the current one with the larger prior. Instead, move all the larger priors then insert the current one to its final place.
+
 1. $\leq$ is used in CLRS, yet I personally prefer to use $\lt$ to reduce unnecessary swap of multiple items with the same value. The difference is minor, either the last or the first one choose as the partition point.
 2. must be <= and >= to get meet
