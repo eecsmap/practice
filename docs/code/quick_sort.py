@@ -63,7 +63,50 @@ def quick_sort(data):
         data[start], data[i] = data[i], data[start]
         return i
     
-    _partition = _partition4
+    def _partition5(start, end):
+        '''
+        Hoare-partition
+        '''
+        i = start
+        pivot = data[end]
+        for j in range(start, end):
+            # loop invariant holds before each iteration
+            assert all(d < pivot for d in data[:i])
+            if data[j] < pivot:
+                data[i], data[j] = data[j], data[i]
+                i += 1
+            # loop invariant holds after each iteration
+            assert all(d < pivot for d in data[:i])
+        # now all items in data[start:end] are organized into two parts
+        # from data[start:i] are < pivot
+        # from data[i:end] are >= pivot
+        # then we swap data[i] with data[end]
+        # return i as the partition point
+        data[i], data[end] = data[end], data[i]
+        return i
+    
+    def _partition6(start, end):
+        '''
+        Hoare-partition variant, to save the last swap
+        The cost is to protentially move more items unnecesary
+        '''
+        i = start
+        pivot = data[end]
+        for j in range(start, end + 1):
+            # loop invariant holds before each iteration
+            assert all(d <= pivot for d in data[:i])
+            if data[j] <= pivot:
+                data[i], data[j] = data[j], data[i]
+                i += 1
+            # loop invariant holds after each iteration
+            assert all(d <= pivot for d in data[:i])
+        # now all items in data[start:end] are organized into two parts
+        # from data[start:i] are <= pivot
+        # data[i - 1] == pivot
+        # from data[i+1:end] are > pivot
+        return i - 1
+
+    _partition = _partition6
     
     def _quick_sort(start, end):
         if start >= end: return
@@ -75,25 +118,19 @@ def quick_sort(data):
 
 
 def qsort(data):
-    '''
-    practice
-    '''
-    def _qsort(first, last):
-        if first >= last: return
-        pivot = data[first]
-        p = first
-        for i in range(first + 1, last + 1):
-            if data[i] < pivot:
-                p += 1
+    def _qsort(begin, end):
+        if end - begin < 2: return
+        p = begin
+        for i in range(begin, end):
+            if data[i] <= data[end - 1]:
                 data[p], data[i] = data[i], data[p]
-        data[first], data[p] = data[p], data[first]
-        _qsort(first, p - 1)
-        _qsort(p + 1, last)
-
-    return _qsort(0, len(data) - 1)
+                p += 1
+        _qsort(begin, p - 1)
+        _qsort(p, end)
+    return _qsort(0, len(data))
 
 sort = qsort 
-sort = quick_sort
+#sort = quick_sort
 
 def test_sort():
     '''
