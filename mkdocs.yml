@@ -2,6 +2,7 @@ site_name: Practice Makes Perfect
 
 theme:
   name: material
+  language: zh
   features:
     - content.code.annotate 
 
@@ -26,6 +27,7 @@ nav:
     - 'main': 'data_structure/index.md'
     - 'BST': 'data_structure/bst.md'
     - 'Graph': 'data_structure/graph.md'
+    - 'Suffix Array': 'data_structure/sa.md'
   - Java: 'java.md'
   - Probability:
     - 'main': 'probability/index.md'
