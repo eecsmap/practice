@@ -23,6 +23,8 @@ extra_javascript:
 
 nav:
   - Home: 'index.md'
+  - Algorithms:
+    - 'Big O': 'algorithms/asymptotic_analysis.md'
   - Data Structure:
     - 'main': 'data_structure/index.md'
     - 'BST': 'data_structure/bst.md'
@@ -31,3 +33,5 @@ nav:
   - Java: 'java.md'
   - Probability:
     - 'main': 'probability/index.md'
+  - 快速排序: '快速排序.md'
+  - 图: '图.md'

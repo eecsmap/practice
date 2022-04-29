@@ -1,4 +1,5 @@
-from graph import G
+from simple_graph import SimpleGraph as G
+#from graph import G
 
 def test():
     g = G()
@@ -13,32 +14,4 @@ def test():
     print(g.V)
     print(g)
 
-def test():
-    '''
-    directed graph
-    '''
-    g = G()
-    g.add_direct(1, 2)
-    g.add_direct(1, 4)
-    g.add_direct(2, 5)
-    g.add_direct(3, 5)
-    g.add_direct(3, 6)
-    g.add_direct(4, 2)
-    g.add_direct(5, 4)
-    g.add_direct(6, 6)
-    print(g.E)
-    print(g.V)
-    print(g)
-
-def test():
-    '''
-    directed graph
-    '''
-    g = G()
-    g.add_direct('a', 'b')
-    g.add_direct('a', 'd')
-    g.add_direct('z', 'a')
-    g.add_direct('b', 'y')
-    print(g.E)
-    print(g.V)
-    print(g)
+test()
