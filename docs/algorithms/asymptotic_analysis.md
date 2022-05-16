@@ -1,0 +1,45 @@
+# Basic facts
+
+- $logn \in o(n^\epsilon)$ for any $\epsilon > 0$
+- $log^{c}n \in o(n^\epsilon)$ for any $\epsilon > 0$
+- $c_1^{n} \in o(c_2^{n})$ for all $1 \leq c_1 < c_2$
+
+## order
+- $1/\log n$
+----
+- $2^{2+1/n}$
+----
+- $\sqrt{\log \log n}$
+----
+- $\log n/\log \log n$
+----
+- $\log n$
+----
+- $\Theta(\log n) = 3^{\log\log n} < 3^{\sqrt{\log n}} < 3^{\log n} = \Theta(n)$
+----
+- $5(n+1/n)$
+- $e^{\ln n} = n$
+----
+- $\log (n!) = n \log n$
+----
+- $n \log ^3 n$
+----
+- $4n^{3/2}$
+----
+- $4^{\log n} = n^2$
+----
+- $n^2 \log n$
+----
+- $n^3$
+----
+- $n^{100}$
+----
+- $3^{\sqrt{n}}$
+----
+- $4^{n} = 2^{2n}$
+----
+- $n!$
+----
+- $2^{n^2 \log n} = n^{n^2}$
+----
+- $2^{2^n}$

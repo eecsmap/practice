@@ -29,16 +29,3 @@ def test():
     print(g.E)
     print(g.V)
     print(g)
-
-def test():
-    '''
-    directed graph
-    '''
-    g = G()
-    g.add_direct('a', 'b')
-    g.add_direct('a', 'd')
-    g.add_direct('z', 'a')
-    g.add_direct('b', 'y')
-    print(g.E)
-    print(g.V)
-    print(g)
