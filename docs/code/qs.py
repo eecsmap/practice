@@ -29,6 +29,20 @@ def quicksort2(data):
 
 quicksort = quicksort2
 
+def quicksort(data):
+    def _qs(lo, hi):
+        if lo > hi: return
+        pivot = data[hi]
+        k = lo
+        for i in range(lo, hi):
+            if data[i] < pivot:
+                data[k], data[i] = data[i], data[k]
+                k += 1
+        data[k], data[hi] = data[hi], data[k]
+        _qs(lo, k - 1)
+        _qs(k + 1, hi)
+    _qs(0, len(data) - 1)
+
 def test_quicksort():
     '''
     >>> data = [9,2,4,7,3,8,6,5,1]
