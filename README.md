@@ -1,6 +1,8 @@
 # practice
 
 ## setup
+- `pip install mkdocs`
+- `pip install mkdocs-material`
 - create an empty github repository
 - clone it locally
 - `cd` into it
