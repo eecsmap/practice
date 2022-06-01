@@ -36,3 +36,5 @@ nav:
   - 快速排序: '快速排序.md'
   - 图: '图.md'
   - MIT S6.081: 'mit_6.s081/index.md'
+  - hints: 'hint.md'
+
