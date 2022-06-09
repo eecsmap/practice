@@ -10,7 +10,7 @@ Let 1-bit variable, hold either 0 or 1.
 - binary:
   - The simplest relationship involves two variables. Let's care about the symmetrical relaitonships only.
 
-| input | Ground | NOR | XOR | NAND | AND | XNOR | OR | VC |
+| input | Gnd | NOR | XOR | NAND | AND | XNOR | OR | Vcc |
 | ----- | - | - | - | - | - | - | - | - |
 |    00 | 0 | 1 | 0 | 1 | 0 | 1 | 0 | 1 |
 | 01/10 | 0 | 0 | 1 | 1 | 0 | 0 | 1 | 1 |
