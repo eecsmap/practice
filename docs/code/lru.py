@@ -40,11 +40,49 @@ remove the least recently used page from the cache:
 
 '''
 
+from functools import lru_cache
+
+@lru_cache(maxsize=3100)
+def fib(n):
+    '''
+    >>> fib(0)
+    0
+    >>> fib(1)
+    1
+    >>> fib(2)
+    1
+    >>> fib(3)
+    2
+    >>> fib(4)
+    3
+    >>> fib(5)
+    5
+    >>> fib(6)
+    8
+    >>> fib(7)
+    13
+    >>> fib(8)
+    21
+    >>> fib(9)
+    34
+    >>> fib(10)
+    55
+    >>> fib(506)
+    2501848252103980047678723474640612996118441882248552061029655746089424880023811520697916190803488354459633
+    '''
+    assert n >= 0
+    if n < 2:
+        return n
+    return fib(n - 1) + fib(n - 2)
+
+import doctest; doctest.testmod()
+
+
 class LRU:
 
-    def __init__(self, size):
+    def __init__(self, capacity):
         '''
-        init with a capacity of size
+        initialize the cache
         '''
 
     def touch(self, page_id):
@@ -67,9 +105,3 @@ class LRU:
         >>> lru.touch(9)
         5
         '''
-
-class Cache:
-
-    def __init__(self, size, source):
-        self.lru = LRU(size)
-        self.source = source

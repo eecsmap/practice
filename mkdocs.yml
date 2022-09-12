@@ -39,3 +39,4 @@ nav:
   - MIT S6.081: 'mit_6.s081/index.md'
   - hints: 'hint.md'
   - Bayes: 'bayes.md'
+  - RSA: 'rsa.md'

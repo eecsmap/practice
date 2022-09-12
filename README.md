@@ -32,7 +32,10 @@
 - verify the result
 
 ## best practice
-- run `mkdocs serve` to do the local change
+- run `git pull` to sync with repo
+- run `source ~/venv/practice/bin/active` to activate venv
+- run `mkdocs serve` to start a local host
+- launch a page at `http://127.0.0.1:8000`
 - keep updating [this](https://github.com/eecsmap/practice/blob/main/README.md) document
 
 ## remember to add docs/CNAME
