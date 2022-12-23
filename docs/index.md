@@ -1,3 +1,12 @@
+## C语言接口与实现
+
+## 特斯拉，读书与对话
+
+## 编译，思维，理解，表达
+
+## 
+
+## 
 ## {0, 1}
 The simplest set represents the difference.
 
@@ -44,3 +53,4 @@ which can be represented as POS or SOP.
 - Think POS as `all the 0 filters failed`
 
 ## 
+LISP揭示了程序语言的本质，LISP程序本身就是一个AST。非叶子结点代表操作符，其叶子结点代表操作数。

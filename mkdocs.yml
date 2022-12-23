@@ -40,3 +40,7 @@ nav:
   - hints: 'hint.md'
   - Bayes: 'bayes.md'
   - RSA: 'rsa.md'
+  - Verify Cerfiticate: 'certificate_verification.md'
+  - books:
+    - 'C Interfaces and Implementations': 'books/c_interfaces_and_implementations.md'
+  
