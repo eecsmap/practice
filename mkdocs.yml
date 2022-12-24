@@ -43,4 +43,5 @@ nav:
   - Verify Cerfiticate: 'certificate_verification.md'
   - books:
     - 'C Interfaces and Implementations': 'books/c_interfaces_and_implementations.md'
-  
+  - compiler courses:
+    - 'ca.sfu.cmpt379.2022.fall': 'ca.sfu.cmpt379.2022.fall.md'
