@@ -1,21 +1,11 @@
-## C语言接口与实现
-
-## 特斯拉，读书与对话
-
-## 编译，思维，理解，表达
-
-## 
-
-## 
-## {0, 1}
-The simplest set represents the difference.
+$\{0, 1\}$ The simplest set represents the difference.
 
 0, 1 are just symbols in the alphabet of size 2.
 Let 1-bit variable, hold either 0 or 1.
 
 ## Operations on the variable(s)
 - unary:
-  - NOT: represents a change, either from 0 to 1, or from 1 to 0.
+  * NOT: represents a change, either from 0 to 1, or from 1 to 0.
 - binary:
   - The simplest relationship involves two variables. Let's care about the symmetrical relaitonships only.
 
@@ -24,6 +14,13 @@ Let 1-bit variable, hold either 0 or 1.
 |    00 | 0 | 1 | 0 | 1 | 0 | 1 | 0 | 1 |
 | 01/10 | 0 | 0 | 1 | 1 | 0 | 0 | 1 | 1 |
 |    11 | 0 | 0 | 0 | 0 | 1 | 1 | 1 | 1 |
+
+| A, b | A->B | A<-B | A<->B |
+| ----- | - | - | - |
+|    00 | 1 | 1 | 1 |
+|    01 | 1 | 0 | 0 |
+|    10 | 0 | 1 | 0 |
+|    11 | 1 | 1 | 1 |
  
 With the help of NOT, we can reduce the operations into three:
 
