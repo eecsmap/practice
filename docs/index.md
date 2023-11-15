@@ -1,3 +1,5 @@
+四十岁满，
+
 $\{0, 1\}$ The simplest set represents the difference.
 
 0, 1 are just symbols in the alphabet of size 2.
