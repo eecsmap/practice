@@ -6,7 +6,8 @@ repo_name: eecsmap/practice
 repo_url: https://github.com/eecsmap/practice
 
 theme:
-  name: material
+  # name: material
+  name: readthedocs
   language: en
   features:
     - tabs
